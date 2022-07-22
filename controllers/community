@@ -1,0 +1,44 @@
+
+
+const { request } = require("http")
+
+// @ description GET all communities
+//@routes  GET /api/v1/communities
+//@access   Public
+exports.getCommunities = (req,res, next) => {
+    res.status(200).json({success: true, msg: 'Show all communities'})
+}
+
+// @ description GET single community
+//@routes  GET /api/v1/communities/:id
+//@access   Public
+
+exports.getCommunity = (req,res, next) => {
+    res.status(200).json({success: true, msg: `get community ${req.params.id}`})
+}
+
+// @ description  create new community
+//@routes  POST /api/v1/communities/:id
+//@access   Private
+
+exports.createCommunity = (req,res, next) => {
+    res.status(200).json({success: true, msg: 'create new community'})
+}
+
+// @ description  update community
+//@routes  PUT /api/v1/communities/:id
+//@access   Private
+
+exports.updateCommunity = (req,res, next) => {
+    res.status(200).json({success: true, msg: `update community ${req.params.id}`})
+}
+
+// @ description  delete  community
+//@routes  DELETE /api/v1/communities/:id
+//@access   Private
+
+exports.deleteCommunity = (req,res, next) => {
+    res.status(200).json({success: true, msg: `delete community ${req.params.id}`})
+}
+
+
